@@ -26,6 +26,7 @@ $vids = videos_by_date($day, $dbh);
         <link rel="stylesheet" href="assets/css/tuktuk.css">
         <link rel="stylesheet" href="assets/css/tuktuk.icons.css">
         <link rel="stylesheet" href="assets/css/tuktuk.grid.css">
+        <link href="assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <link href="assets/css/jquery.bxslider.css" rel="stylesheet" />
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
