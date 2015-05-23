@@ -11,8 +11,8 @@ $query = "CREATE TABLE IF NOT EXISTS `video` (
   `presentation` varchar(256) DEFAULT NULL,
   `day` smallint(5) unsigned DEFAULT NULL,
   `timestamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `starttime` smallint(5) unsigned DEFAULT '0',
-  `endtime` smallint(5) unsigned DEFAULT '0'
+  `starttime` smallint(5) unsigned DEFAULT NULL,
+  `endtime` smallint(5) unsigned DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8";
 $st = $dbh->prepare($query);
 $st->execute();
