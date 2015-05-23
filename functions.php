@@ -132,7 +132,7 @@ function image_upload($index) {
     if (!in_array($ext, array('png', 'gif', 'jpg', 'jpeg'))) {
         throw new Exception("File is not a valid picture");
     }
-    $destination = '/projects/vod/assets/img/' . uniqid("img_") . '.' . $ext;
+    $destination = '/assets/img/' . uniqid("img_") . '.' . $ext;
     if (move_uploaded_file($_FILES[$index]['tmp_name'], filter_input(INPUT_SERVER, 'DOCUMENT_ROOT', FILTER_SANITIZE_STRING) . $destination)) {
         return $destination;
     } else {
@@ -148,7 +148,7 @@ function file_upload($index) {
         throw new Exception("File size is more than 16MB");
     }
     $ext = pathinfo($_FILES[$index]['name'], PATHINFO_EXTENSION);
-    $destination = '/projects/vod/attachements/' . uniqid("prez_") . '.' . $ext;
+    $destination = '/attachements/' . uniqid("prez_") . '.' . $ext;
     if (move_uploaded_file($_FILES[$index]['tmp_name'], filter_input(INPUT_SERVER, 'DOCUMENT_ROOT', FILTER_SANITIZE_STRING) . $destination)) {
         return $destination;
     } else {
