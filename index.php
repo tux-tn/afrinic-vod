@@ -4,8 +4,9 @@ require_once "connection.php";
 $dbh = new PDO($dsn, $username, $dbpassword, $options);
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 $day = filter_input(INPUT_GET, 'day', FILTER_SANITIZE_NUMBER_INT);
-if (empty($id) && !empty($day)) {
-    if (empty($id = default_by_date($day, $dbh))) {
+if (empty($id)){
+    $id = default_by_date($day, $dbh);
+    if (empty($id)) {
         $id = 1;
     }
 }
