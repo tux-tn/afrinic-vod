@@ -2,7 +2,7 @@
 require_once "connection.php";
 $dbh = new PDO($dsn, $username, $dbpassword, $options);
 $query = "CREATE TABLE IF NOT EXISTS `video` (
-  `id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `url` varchar(256) DEFAULT NULL,
   `title` varchar(256) DEFAULT NULL,
   `views` smallint(5) unsigned NOT NULL DEFAULT '0',
