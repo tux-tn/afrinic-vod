@@ -24,19 +24,19 @@ $vids = videos_by_date($day, $dbh);
         <meta charset="utf-8" />
         <title><?php echo $video["title"]; ?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        <link rel="stylesheet" href="assets/css/tuktuk.css">
-        <link rel="stylesheet" href="assets/css/tuktuk.icons.css">
-        <link rel="stylesheet" href="assets/css/tuktuk.grid.css">
-        <link href="assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <link href="assets/css/jquery.bxslider.css" rel="stylesheet" />
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/tuktuk.css">
+        <link rel="stylesheet" href="/assets/css/tuktuk.icons.css">
+        <link rel="stylesheet" href="/assets/css/tuktuk.grid.css">
+        <link href="/assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="/assets/css/jquery.bxslider.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/assets/css/style.css">
     </head>
     <body>
         <header class="bck margin-bottom">
             <div class="row">
                 <div class="column_6">
                     <a href="https://afrinic.net">
-                        <img src="assets/img/logo.png" class="logo on-left">
+                        <img src="/assets/img/logo.png" class="logo on-left">
                     </a>
                     <h3 class="text bold">AFRINIC 22 - VOD</h3>
                 </div>
@@ -118,9 +118,9 @@ $vids = videos_by_date($day, $dbh);
             <?php } else { ?>
                 <div class='row'><div class='column_12 text center alert'>Video list is empty. Please come back later and try again!</div></div>
             <?php } ?>
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/jquery.bxslider.min.js"></script>
-            <script src="assets/js/tuktuk.js"></script>
+            <script src="/assets/js/jquery.min.js"></script>
+            <script src="/assets/js/jquery.bxslider.min.js"></script>
+            <script src="/assets/js/tuktuk.js"></script>
             <script>
                 $(document).ready(function () {
                     $('.slider').bxSlider({
