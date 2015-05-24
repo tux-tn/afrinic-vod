@@ -82,6 +82,15 @@ $vids = videos_by_date($day, $dbh);
                                 <a href="<?php echo $video["presentation"]; ?>" class="button large"><span class="icon download"></span>  Download presentation</a>
                             </div>
                         <?php } ?>
+                        <div class="row">
+                            <div class="text center column_6 padding-top padding-bottom">
+                              <ul class="social-buttons">
+                                <li><span class='st_twitter_large' displayText='Tweet'></span></li>
+                                <li><span class='st_googleplus_large' displayText='Google +'></span></li>
+                                <li><span class='st_facebook_large' displayText='Facebook'></span></li>
+                              </ul>
+                            </div>
+                      </div>
                     </div>
                 </div>
             </section>
@@ -121,8 +130,10 @@ $vids = videos_by_date($day, $dbh);
             <?php } ?>
             <script src="/assets/js/jquery.min.js"></script>
             <script src="/assets/js/jquery.bxslider.min.js"></script>
+            <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
             <script src="/assets/js/tuktuk.js"></script>
-            <script>
+            <script type="text/javascript">
+                stLight.options({publisher: "51b6aab2-cddc-4934-a1b4-fe86813d1054", doNotHash: false, doNotCopy: false, hashAddressBar: false});
                 $(document).ready(function () {
                     $('.slider').bxSlider({
                         slideWidth: 320,

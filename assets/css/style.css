@@ -60,6 +60,16 @@ header h3{
   -moz-box-shadow:inset 0 0 5em rgba(0,0,0,0.2),inset 0 1px rgba(0,0,0,0.2);
   box-shadow:inset 0 0 5em rgba(0,0,0,0.2),inset 0 1px rgba(0,0,0,0.2);
 }
+
+.social-buttons {
+    display: block;
+    list-style: outside none none;
+    padding: 0px;
+    margin: 20px;
+}
+.social-buttons li {
+  display:inline-block;
+}
 .slider-header{
   background: #0A6E93;
   margin-bottom:50px;
@@ -97,7 +107,6 @@ nav a{
     right: 0;
     background:none;
 }
-
 .overlay:hover:before,.active .overlay:before {
   background: rgba(24,148,202, 0.5) url('../img/play.png') no-repeat scroll center center;;
 }
