@@ -57,21 +57,21 @@ $vids = videos_by_date($day, $dbh);
                         <table class="padding-top">
                             <tbody>
                                 <tr>
-                                    <td class="highlight"><span class="icon bookmark-empty"></span> Title</td>
+                                    <td><span class="icon bookmark-empty"></span> Title</td>
                                     <td class="right"><?php echo $video["title"]; ?></td>
                                 </tr>
                                 <tr>
                                     <?php if (!empty($video["speaker"])) { ?>
-                                        <td class="highlight"><span class="icon user"></span> Speaker</td>
+                                        <td><span class="icon user"></span> Speaker</td>
                                         <td class="right">  <?php echo $video["speaker"]; ?></td>
                                     <?php } ?>
                                 </tr>
                                 <tr>
-                                    <td class="highlight"><span class="icon bar-chart"></span> Views</td>
+                                    <td><span class="icon bar-chart"></span> Views</td>
                                     <td class="right"><?php echo $video["views"]; ?><br/></td>
                                 </tr>
                                 <tr>
-                                    <td class="highlight"><span class="icon calendar"></span> Date</td>
+                                    <td><span class="icon calendar"></span> Date</td>
                                     <td class="right"> <?php echo date("d F Y", strtotime("2015-06-0" . $video['day'])); ?></td>
                                 </tr>
                             </tbody>
@@ -154,8 +154,8 @@ $vids = videos_by_date($day, $dbh);
                         maxSlides: 5,
                         slideMargin: 20
                     });
-                    $("html, body").animate({ scrollTop: $('.main').offset().top }, 1000); 
-               });
+                    $("html, body").animate({ scrollTop: $('#title1').offset().top }, 1000);
+                 });
             </script>  <?php } ?>
     </body>
 </html>
