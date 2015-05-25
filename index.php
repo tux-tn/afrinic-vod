@@ -47,13 +47,13 @@ $vids = videos_by_date($day, $dbh);
             </div>
         <?php } else { ?>
             <section class="main">
-                <div class="row margin-bottom">
+                <div class="row">
                     <div class="column_6 padding-top padding-bottom">
                         <div class="video">
                             <iframe src="<?php echo $url; ?>" frameborder="0"></iframe>
                         </div>
                     </div>
-                    <div class="column_6 padding-top padding-bottom">
+                    <div class="column_6 padding-top">
                         <table class="padding-top">
                             <tbody>
                                 <tr>
@@ -82,7 +82,7 @@ $vids = videos_by_date($day, $dbh);
                             </div>
                         <?php } ?>
                         <div class="row">
-                            <div class="text center column_6 padding-top padding-bottom">
+                            <div class="text center column_6 padding-top">
                                 <ul class="social-buttons">
                                     <li><a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?url=<?php echo htmlspecialchars("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>" target="_blank"><div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small">
                                                 <svg class="resp-sharing-button__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em" viewBox="0 0 32 32">
