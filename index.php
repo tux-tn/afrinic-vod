@@ -78,7 +78,7 @@ $vids = videos_by_date($day, $dbh);
                         </table>
                         <?php if (!empty($video["presentation"])) { ?>
                             <div class="text center">
-                                <a href="<?php echo $video["presentation"]; ?>" class="button large"><span class="icon download"></span>  Download presentation</a>
+                                <a href="<?php echo $video["presentation"]; ?>" class="button"><span class="icon download"></span>  Download presentation</a>
                             </div>
                         <?php } ?>
                         <div class="row">
