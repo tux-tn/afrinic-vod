@@ -154,7 +154,8 @@ $vids = videos_by_date($day, $dbh);
                         maxSlides: 5,
                         slideMargin: 20
                     });
-                });
+                    $("html, body").animate({ scrollTop: $('.main').offset().top }, 1000); 
+               });
             </script>  <?php } ?>
     </body>
 </html>
