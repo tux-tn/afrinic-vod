@@ -24,12 +24,10 @@ header{
     padding:10px 20px;
     border-bottom: 0.25em solid #1894CA;
 }
-header img {
-    width:240px;
-}
+
 header h3{
     font-size:1.6em;
-    letter-spacing:-1px;
+    color: #333;
 }
 .main{
     padding-bottom:50px;

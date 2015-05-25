@@ -32,13 +32,12 @@ $vids = videos_by_date($day, $dbh);
         <link rel="stylesheet" href="/assets/css/style.css">
     </head>
     <body>
-        <header class="bck margin-bottom">
+        <header class="bck">
             <div class="row">
-                <div class="column_6">
-                    <a href="https://afrinic.net">
-                        <img src="/assets/img/logo.png" class="logo on-left">
+                <div class="column_12">
+                    <a href="http://internetsummitafrica.org/">
+                        <h3 class="text bold">AIS'15 / AFRINIC-22 VOD</h3>
                     </a>
-                    <h3 class="text bold">AFRINIC 22 - VOD</h3>
                 </div>
             </div>
         </header>
