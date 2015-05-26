@@ -2,7 +2,7 @@
 setlocale (LC_TIME, 'fr_FR.utf8','fra');
 require_once "functions.php";
 require_once "connection.php";
-//$dsn = 'mysql:host=127.0.0.1;dbname=vodfr';
+$dsn = 'mysql:host=127.0.0.1;dbname=vodfr';
 $dbh = new PDO($dsn, $username, $dbpassword, $options);
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 $day = filter_input(INPUT_GET, 'day', FILTER_SANITIZE_NUMBER_INT);
