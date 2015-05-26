@@ -1,6 +1,8 @@
 <?php
+setlocale (LC_TIME, 'fr_FR.utf8','fra');
 require_once "functions.php";
 require_once "connection.php";
+//$dsn = 'mysql:host=127.0.0.1;dbname=vodfr';
 $dbh = new PDO($dsn, $username, $dbpassword, $options);
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 $day = filter_input(INPUT_GET, 'day', FILTER_SANITIZE_NUMBER_INT);
@@ -43,7 +45,7 @@ $vids = videos_by_date($day, $dbh);
         </header>
         <?php if (empty($video)) { ?>
             <div class='row padding-top'>
-                <div class='column_12 text center alert'>Video not found. Please come back later and try again!</div>
+                <div class='column_12 text center alert'>Vidéo introuvable. Veuillez revenir plus tard et réessayer!</div>
             </div>
         <?php } else { ?>
             <section class="main">
@@ -57,7 +59,7 @@ $vids = videos_by_date($day, $dbh);
                         <table class="padding-top">
                             <tbody>
                                 <tr>
-                                    <td><span class="icon bookmark-empty"></span> Title</td>
+                                    <td><span class="icon bookmark-empty"></span> Titre</td>
                                     <td class="right"><?php echo $video["title"]; ?></td>
                                 </tr>
                                 <tr>
@@ -67,7 +69,7 @@ $vids = videos_by_date($day, $dbh);
                                     <?php } ?>
                                 </tr>
                                 <tr>
-                                    <td><span class="icon bar-chart"></span> Views</td>
+                                    <td><span class="icon bar-chart"></span> Vues</td>
                                     <td class="right"><?php echo $video["views"]; ?><br/></td>
                                 </tr>
                                 <tr>
@@ -78,7 +80,7 @@ $vids = videos_by_date($day, $dbh);
                         </table>
                         <?php if (!empty($video["presentation"])) { ?>
                             <div class="text center">
-                                <a href="<?php echo $video["presentation"]; ?>" class="button"><span class="icon download"></span>  Download presentation</a>
+                                <a href="<?php echo $video["presentation"]; ?>" class="button"><span class="icon download"></span>  Télécharger la présentation</a>
                             </div>
                         <?php } ?>
                         <div class="row">
@@ -115,7 +117,7 @@ $vids = videos_by_date($day, $dbh);
                             <?php
                             for ($d = 1; $d <= 5; $d++) {
                                 $date = "2015-06-0$d";
-                                $theDate = date("M jS", strtotime($date));
+                                $theDate = strftime("%d %B", strtotime($date));
                                 if ($d == $day) {
                                     echo "<a href='?day=$d' class='active'>$theDate<span class='tick'></span></a>";
                                 } else {
@@ -140,7 +142,7 @@ $vids = videos_by_date($day, $dbh);
                     <?php } ?>
                 </div>
             <?php } else { ?>
-                <div class='row'><div class='column_12 text center alert'>Video list is empty. Please come back later and try again!</div></div>
+                <div class='row'><div class='column_12 text center alert'>La liste des vidéos est vide. Veuillez revenir plus tard et réessayer!</div></div>
             <?php } ?>
             <script src="/assets/js/jquery.min.js"></script>
             <script src="/assets/js/jquery.bxslider.min.js"></script>
