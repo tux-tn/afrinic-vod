@@ -119,9 +119,9 @@ $vids = videos_by_date($day, $dbh);
                                 $date = "2015-06-0$d";
                                 $theDate = strftime("%d %B", strtotime($date));
                                 if ($d == $day) {
-                                    echo "<a href='?day=$d' class='active'>$theDate<span class='tick'></span></a>";
+                                    echo "<a href='$_SERVER[SCRIPT_NAME]?day=$d' class='active'>$theDate<span class='tick'></span></a>";
                                 } else {
-                                    echo "<a href='?day=$d'>$theDate</a>";
+                                    echo "<a href='$_SERVER[SCRIPT_NAME]?day=$d'>$theDate</a>";
                                 }
                             }
                             ?>
@@ -134,7 +134,7 @@ $vids = videos_by_date($day, $dbh);
                 <div class="slider">
                     <?php foreach ($vids as $vid) { ?>
                         <div class="slide">
-                            <a href="?id=<?php echo $vid["id"]; ?>" <?php if ($vid['id'] == $id) echo "class='active'"; ?>>
+                            <a href="<?php echo $_SERVER[SCRIPT_NAME];?>?id=<?php ech $vid["id"]; ?>" <?php if ($vid['id'] == $id) echo "class='active'"; ?>>
                                 <img class="thumbnail" title="<?php echo $vid['title']; ?>" src="<?php echo $vid["thumbnail"]; ?>" >
                                 <div class="overlay"></div>
                             </a>
